@@ -1,0 +1,27 @@
+﻿Build started 2014-6-6 14:23:20.
+     1>Project "E:\刘健冉\多目视觉\记录视觉结果V23（两套双目）\记录视觉结果V19（非阻塞）\记录视觉结果V17\记录视觉结果V3\ppq_sym.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating ".\Debug\ppq_sym.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug\\" /Fd".\Debug\vc100.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt Cam3D.cpp
+         Cam3D.cpp
+     1>e:\刘健冉\多目视觉\记录视觉结果v23（两套双目）\记录视觉结果v19（非阻塞）\记录视觉结果v17\记录视觉结果v3\cam3d.cpp(198): warning C4101: 'm' : unreferenced local variable
+       Link:
+         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug\ppq_sym.exe" /INCREMENTAL /NOLOGO odbc32.lib odbccp32.lib "libgsl-0.lib" "libgslcblas-0.lib" "libnlopt-0.lib" libmygsl.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:".\Debug\ppq_sym.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\刘健冉\多目视觉\记录视觉结果V23（两套双目）\记录视觉结果V19（非阻塞）\记录视觉结果V17\记录视觉结果V3\Debug\ppq_sym.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Debug\ppq_sym.lib" /MACHINE:X86 .\Debug\cRobotArm.obj
+         .\Debug\Cam3D.obj
+         .\Debug\camer.obj
+         .\Debug\GlobleSrouce.obj
+         .\Debug\main.obj
+         ppq_sym.vcxproj -> E:\刘健冉\多目视觉\记录视觉结果V23（两套双目）\记录视觉结果V19（非阻塞）\记录视觉结果V17\记录视觉结果V3\.\Debug\ppq_sym.exe
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"E:\刘健冉\多目视觉\记录视觉结果V23（两套双目）\记录视觉结果V19（非阻塞）\记录视觉结果V17\记录视觉结果V3\.\Debug\ppq_sym.exe.manifest" /manifest .\Debug\ppq_sym.exe.intermediate.manifest
+       BscMake:
+         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\bscmake.exe /nologo /o".\Debug\ppq_sym.bsc" .\Debug\cRobotArm.sbr .\Debug\Cam3D.sbr .\Debug\camer.sbr .\Debug\GlobleSrouce.sbr .\Debug\main.sbr
+       FinalizeBuildStatus:
+         Deleting file ".\Debug\ppq_sym.unsuccessfulbuild".
+         Touching ".\Debug\ppq_sym.lastbuildstate".
+     1>Done Building Project "E:\刘健冉\多目视觉\记录视觉结果V23（两套双目）\记录视觉结果V19（非阻塞）\记录视觉结果V17\记录视觉结果V3\ppq_sym.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:08.20
