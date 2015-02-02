@@ -92,42 +92,39 @@ void main()
 			t_o = SystemClock.now();
 			robotVision.ReConstruction(rt,&t_out,&x_out,&y_out,&z_out,&vx_out,&vy_out,&vz_out);//三维重建
 
-			if (rt == 2)
-			{
-				x_out += 700;
-			}
+			z_out = -z_out;
 
 			if ( dataFile.m_bStartSave )   //存储乒乓球位置
 			{
 				dataFile.SaveTraceData( x_out  , y_out , z_out  , t_out ,vx_out,vy_out,rt,88);
 			} 
 
-			//if (CheckTraceChange(x_out,y_out,z_out,vx_out,vy_out,vz_out,t_out))//若存在新轨迹
-			//{
-			//	cout<<"Prepare to Predict"<<endl;
-			//	Predicted = 0;	
-			//	ballPredictHis.clear();
-			//}
-			//if ( Predicted == 0 )
-			//{
-			//	ballPredictHis.push_back(x_out,y_out,z_out,vx_out,vy_out,vz_out,t_out);
-			//	if ( ballPredictHis.size() >= 5 )
-			//	{
-			//		
-			//		Predict_traceV2(ballPredictHis,ballHit);
-			//		Predicted = 1;
+			if (CheckTraceChange(x_out,y_out,z_out,vx_out,vy_out,vz_out,t_out))//若存在新轨迹
+			{
+				cout<<"Prepare to Predict"<<endl;
+				Predicted = 0;	
+				ballPredictHis.clear();
+			}
+			if ( Predicted == 0 )
+			{
+				ballPredictHis.push_back(x_out,y_out,z_out,vx_out,vy_out,vz_out,t_out);
+				if ( ballPredictHis.size() >= 5 )
+				{
+					
+					Predict_traceV2(ballPredictHis,ballHit);
+					Predicted = 1;
 
-			//		robotArm.HitBall(ballHit[0],ballHit[1],ballHit[2],ballHit[3],ballHit[4],ballHit[5],ballHit[6]*1000);
+					//robotArm.HitBall(ballHit[0],ballHit[1],ballHit[2],ballHit[3],ballHit[4],ballHit[5],ballHit[6]*1000);
 
-			//		for (int i = 0;i<7;i++)
-			//		{
-			//			cout<<ballHit[i]<<" ";
-			//		}
-			//		cout<<endl;
-			//		printline(30);
-			//		ballPredictHis.clear();
-			//	}	
-			//}
+					for (int i = 0;i<7;i++)
+					{
+						cout<<ballHit[i]<<" ";
+					}
+					cout<<endl;
+					printline(30);
+					ballPredictHis.clear();
+				}	
+			}
 	    }
 		//---------------------------------------------
 	}
