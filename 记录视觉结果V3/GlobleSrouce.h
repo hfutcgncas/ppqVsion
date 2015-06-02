@@ -68,5 +68,41 @@ public:
 	bool FileInit();
 	void SaveTraceData(double x,double y,double z,double t,double vx,double vy,double vz,int flag);
 };
+//=================================================================================================
+struct BallPoint
+{
+	double x;
+	double y;
+	double z;
 
+	double Vx;
+	double Vy;
+	double Vz;
+
+	double Wx;
+	double Wy;
+	double Wz;
+
+	double t;
+};
+class cBallModel
+{
+	inline double signFun(double a)
+	{
+		if (a == 0)
+		{
+			return 0.0;
+		}
+		if (a> 0)
+		{
+			return a;
+		}
+		else
+			return -a;
+	}
+public:
+	bool predict_OneStep(BallPoint In, BallPoint* pOut, double dt);
+	int predict(BallPoint startPoint, BallPoint* pendPoint, double stopPlane);
+	bool predict_Rebound(BallPoint In, BallPoint* pOut);
+};
 #endif

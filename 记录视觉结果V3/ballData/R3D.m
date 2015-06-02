@@ -3,24 +3,24 @@ load X0.txt
 M = X0;
 
 M = sortrows(M,4);
-% for i = 1:size(M,1)
-%     if M(i,5) == 1
-%         plot3(M(i,1),M(i,2),M(i,3),'r.');
-%         hold on
-%     elseif M(i,5) == 2
-%         plot3(M(i,1),M(i,2),M(i,3),'b.');
-%         hold on
-%     elseif M(i,5) == 3
-%         plot3(M(i,1),M(i,2),M(i,3),'g.');
-%         hold on
-%     elseif M(i,5) == 4
-%         plot3(M(i,1),M(i,2),M(i,3),'y.');
-%         hold on
-%     end
-% end
-plot3(M(:,1),M(:,2),M(:,3),'b.');
+for i = 1:size(M,1)
+    if M(i,7) == 1
+        plot3(M(i,1),M(i,2),M(i,3),'r.');
+        hold on
+    elseif M(i,7) == 2
+        plot3(M(i,1),M(i,2),M(i,3),'b.');
+        hold on
+    elseif M(i,7) == 3
+        plot3(M(i,1),M(i,2),M(i,3),'g.');
+        hold on
+    elseif M(i,7) == 4
+        plot3(M(i,1),M(i,2),M(i,3),'y.');
+        hold on
+    end
+end
+%plot3(M(:,1),M(:,2),M(:,3),'b.');
 xlabel('X');ylabel('Y');zlabel('Z');
-axis([0,2000,-1000,1000,0,600]);
+axis([0,3500,-1500,1500,0,1500]);
 hold off
 P = M(:,1:3)';
 P(1,:) =  P(1,:) - 450;

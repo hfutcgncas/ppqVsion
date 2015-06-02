@@ -1,5 +1,5 @@
 #include"GlobleSrouce.h"
-
+#include"math.h"
 //globle ver--------------------
 cFile  dataFile;
 cClock SystemClock;
@@ -145,4 +145,106 @@ bool cFile::FileInit()
 		//新建文件夹
 	}
 	return 1;
+}
+
+//=================================================================================================
+
+
+bool cBallModel::predict_OneStep(BallPoint In, BallPoint* pOut, double dt)
+{
+	//本函数中单位为 m ，m/s ，s
+	double V;
+	double a[3];
+	double C1 = 0.1500, C2 = 0.0060, g = 9.802;
+
+	V = sqrt(In.Vx * In.Vx + In.Vy * In.Vy + In.Vz * In.Vz);
+	a[0] = -C1*V*In.Vx + C2*In.Wy*In.Vz - C2*In.Wz*In.Vy;
+	a[1] = -C1*V*In.Vy + C2*In.Wz*In.Vx - C2*In.Wx*In.Vz;
+	a[2] = -C1*V*In.Vz + C2*In.Wx*In.Vy - C2*In.Wy*In.Vx - g;
+
+
+	pOut->x = In.x + In.Vx * dt;
+	pOut->y = In.y + In.Vy * dt;
+	pOut->z = In.z + In.Vz * dt;
+
+	pOut->Vx = In.Vx + a[0] * dt;
+	pOut->Vy = In.Vy + a[1] * dt;
+	pOut->Vz = In.Vz + a[2] * dt;
+
+	pOut->Wx = In.Wx;
+	pOut->Wy = In.Wy;
+	pOut->Wz = In.Wz;
+
+	pOut->t = In.t + dt;
+
+	return true;
+}
+bool cBallModel::predict_Rebound(BallPoint In, BallPoint* pOut)
+{
+	double r = 0.02;
+	double u = 0.25, et = 0.93;  // 需要找到合适的摩擦系数0.25、反弹系数
+	double vbt1 = In.x - r*In.Wy;
+	double vbt2 = In.y + r*In.Wx;
+	double vs = 1 - 2.5*u*(1 + et)*signFun(In.Vz) / sqrt(vbt1*vbt1 + vbt2*vbt2);
+	double aa = u*(1 + et)*signFun(In.Vz) / sqrt(vbt1*vbt1 + vbt2*vbt2);
+	if (vs <= 0)
+	{
+		aa = 2 / 5.0;
+	}
+
+	pOut->Vx = (1 - aa)*(In.Vx) + aa*r*In.Wy;
+	pOut->Vy = (1 - aa)*(In.Vy) - aa*r*In.Wx;
+	pOut->Vz = -et*(In.z);
+
+	pOut->Wx = -3.0*aa / 2.0 / r*(In.Vy) + (1 - 3 * aa / 2)*In.Wx;
+	pOut->Wy = 3.0*aa / 2.0 / r*(In.Vx) + (1 - 3 * aa / 2)*In.Wy;
+	pOut->Wz = In.Wz;
+
+	pOut->x = In.x;
+	pOut->y = In.y;
+	pOut->z = In.z;
+
+	pOut->t = In.t;
+	return true;
+}
+int cBallModel::predict(BallPoint startPoint, BallPoint* pendPoint, double stopPlane)
+//return 1 : 正常
+//return -1 : 反向
+//return 2 : 未反弹
+//return 3 : 超时
+{
+	int count = 0;
+	double dt = 0.0005;
+	BallPoint temp1 = startPoint;
+	BallPoint temp2;
+
+
+	if (startPoint.Vx < 0 )
+	{
+		return -1;//反向不预测
+	}
+	//反弹前
+	while (temp1.z > 0.05)
+	{
+		predict_OneStep(temp1, pendPoint, dt);
+		temp1 = *pendPoint;
+		count++;
+
+		if (temp1.x > stopPlane) return 2;  //未反弹
+		if( count > 0.5 / dt) return 3; //超时
+	}
+	//反弹
+	predict_Rebound(temp1, pendPoint);
+	//反弹后
+	while (temp1.x < stopPlane)
+	{
+		predict_OneStep(temp1, pendPoint, dt);
+		temp1 = *pendPoint;
+		count++;
+
+		if (count > 0.5 / dt)
+			return 3; //超时
+	}
+
+	return 1; //正常
 }

@@ -27,7 +27,9 @@ bool cRobotArm::ComInit()
 		return 0; 
 	}	
 	sockClient_Motion=socket(AF_INET,SOCK_DGRAM,0);
-	addrSrv_Motion.sin_addr.S_un.S_addr=inet_addr("192.168.64.82");
+	//addrSrv_Motion.sin_addr.S_un.S_addr=inet_addr("192.168.64.82");
+	addrSrv_Motion.sin_addr.S_un.S_addr = inet_addr("127.0.0.1");
+	addrSrv_Motion.sin_family = AF_INET;
 	addrSrv_Motion.sin_family=AF_INET;
 	addrSrv_Motion.sin_port=htons(7000);
 
@@ -67,12 +69,12 @@ bool cRobotArm::HitBall(double X_hit,double Y_hit,double Z_hit,double hit_vx0,do
 
 
 
-/*	for (int k = 0;k<13;k++)
+	for (int k = 0;k<13;k++)
 	{
 		printf(" %4f",Sendbuff[k]);
 		printf("\n");
 	}
-	*/
+	
 
 	cout<<"RD 2 send"<<endl;
 	//getchar();

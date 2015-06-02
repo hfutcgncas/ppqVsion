@@ -51,13 +51,13 @@ cCamer::cCamer(char* IP,u_short port)//构造函数，用于赋初值
 }
 cCamer::~cCamer()
 {
-	freeMatrix(pz1);
-	freeMatrix(pz2);
-	freeMatrix(pz3);
-	freeMatrix(pz4);
-	freeMatrix(pH);
-	freeMatrix(pgls1);
-	freeMatrix(pgls2);
+	//freeMatrix(pz1);
+	//freeMatrix(pz2);
+	//freeMatrix(pz3);
+	//freeMatrix(pz4);
+	//freeMatrix(pH);
+	//freeMatrix(pgls1);
+	//freeMatrix(pgls2);
 }
 
 //========================================================

@@ -1,95 +1,29 @@
-﻿Build started 2015/2/2 22:14:08.
-     1>Project "C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\ppq_sym.vcxproj" on node 2 (Rebuild target(s)).
+﻿Build started 2015/6/2 15:59:22.
+     1>Project "C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\ppq_sym.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         D:\Program Files\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug\\" /Fd".\Debug\vc140.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt cRobotArm.cpp Cam3D.cpp camer.cpp GlobleSrouce.cpp main.cpp
+         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug\\" /Fd".\Debug\vc120.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt cRobotArm.cpp main.cpp
          main.cpp
-     1>c:\users\dell\documents\github\ppqvsion\记录视觉结果v3\main.cpp(56): warning C4101: 't_c': unreferenced local variable
-         GlobleSrouce.cpp
-     1>c:\users\dell\documents\github\ppqvsion\记录视觉结果v3\globlesrouce.cpp(47): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
-         d:\program files\microsoft visual studio 14.0\vc\include\conio.h(451): note: see declaration of 'getch'
-     1>c:\users\dell\documents\github\ppqvsion\记录视觉结果v3\globlesrouce.cpp(95): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         d:\program files\microsoft visual studio 14.0\vc\include\stdio.h(1722): note: see declaration of 'sprintf'
-     1>c:\users\dell\documents\github\ppqvsion\记录视觉结果v3\globlesrouce.cpp(108): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         d:\program files\microsoft visual studio 14.0\vc\include\stdio.h(1722): note: see declaration of 'sprintf'
-     1>c:\users\dell\documents\github\ppqvsion\记录视觉结果v3\globlesrouce.cpp(109): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         d:\program files\microsoft visual studio 14.0\vc\include\stdio.h(202): note: see declaration of 'fopen'
-     1>c:\users\dell\documents\github\ppqvsion\记录视觉结果v3\globlesrouce.cpp(130): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         d:\program files\microsoft visual studio 14.0\vc\include\time.h(486): note: see declaration of 'localtime'
-     1>c:\users\dell\documents\github\ppqvsion\记录视觉结果v3\globlesrouce.cpp(134): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _mkdir. See online help for details.
-         d:\program files\microsoft visual studio 14.0\vc\include\direct.h(101): note: see declaration of 'mkdir'
-     1>c:\users\dell\documents\github\ppqvsion\记录视觉结果v3\globlesrouce.cpp(140): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         d:\program files\microsoft visual studio 14.0\vc\include\stdio.h(1722): note: see declaration of 'sprintf'
-     1>c:\users\dell\documents\github\ppqvsion\记录视觉结果v3\globlesrouce.cpp(143): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _mkdir. See online help for details.
-         d:\program files\microsoft visual studio 14.0\vc\include\direct.h(101): note: see declaration of 'mkdir'
-         camer.cpp
-     1>c:\users\dell\documents\github\ppqvsion\记录视觉结果v3\camer.cpp(89): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
-         c:\program files\windows kits\8.1\include\um\winsock2.h(1850): note: see declaration of 'inet_addr'
-     1>c:\users\dell\documents\github\ppqvsion\记录视觉结果v3\camer.cpp(147): warning C4458: declaration of 'recvBuf' hides class member
-         c:\users\dell\documents\github\ppqvsion\记录视觉结果v3\camer.h(55): note: see declaration of 'cCamer::recvBuf'
-     1>c:\users\dell\documents\github\ppqvsion\记录视觉结果v3\camer.cpp(232): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
-     1>c:\users\dell\documents\github\ppqvsion\记录视觉结果v3\camer.cpp(281): warning C4458: declaration of 'index' hides class member
-         c:\users\dell\documents\github\ppqvsion\记录视觉结果v3\camer.h(96): note: see declaration of 'cCamer::index'
-         Cam3D.cpp
-     1>c:\users\dell\documents\github\ppqvsion\记录视觉结果v3\cam3d.cpp(233): warning C4101: 'm': unreferenced local variable
-         cRobotArm.cpp
-     1>c:\users\dell\documents\github\ppqvsion\记录视觉结果v3\crobotarm.cpp(30): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
-         c:\program files\windows kits\8.1\include\um\winsock2.h(1850): note: see declaration of 'inet_addr'
+     1>c:\users\dell\documents\github\ppqvsion\记录视觉结果v3\main.cpp(63): warning C4101: 'hitPoint' : unreferenced local variable
+     1>c:\users\dell\documents\github\ppqvsion\记录视觉结果v3\main.cpp(56): warning C4101: 't_c' : unreferenced local variable
+     1>c:\users\dell\documents\github\ppqvsion\记录视觉结果v3\main.cpp(69): warning C4101: 't_2' : unreferenced local variable
+     1>c:\users\dell\documents\github\ppqvsion\记录视觉结果v3\main.cpp(69): warning C4101: 't_1' : unreferenced local variable
+     1>c:\users\dell\documents\github\ppqvsion\记录视觉结果v3\main.cpp(60): warning C4101: 'ballModel' : unreferenced local variable
+     1>c:\users\dell\documents\github\ppqvsion\记录视觉结果v3\main.cpp(65): warning C4101: 'ballHit' : unreferenced local variable
          Generating Code...
-     1>c:\users\dell\documents\github\ppqvsion\记录视觉结果v3\camer.cpp(235): warning C4715: 'cCamer::GetForData': not all control paths return a value
+         Skipping... (no relevant changes detected)
+         cRobotArm.cpp
        Link:
-         D:\Program Files\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug\ppq_sym.exe" /INCREMENTAL /NOLOGO odbc32.lib odbccp32.lib "libgsl-0.lib" "libgslcblas-0.lib" "libnlopt-0.lib" libmygsl.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:".\Debug\ppq_sym.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:".\Debug\ppq_sym.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Debug\ppq_sym.lib" /MACHINE:X86 /SAFESEH .\Debug\cRobotArm.obj
+         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug\ppq_sym.exe" /INCREMENTAL /NOLOGO odbc32.lib odbccp32.lib "libgsl-0.lib" "libgslcblas-0.lib" "libnlopt-0.lib" libmygsl.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:".\Debug\ppq_sym.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:".\Debug\ppq_sym.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Debug\ppq_sym.lib" /MACHINE:X86 /SAFESEH .\Debug\cRobotArm.obj
          .\Debug\Cam3D.obj
          .\Debug\camer.obj
          .\Debug\GlobleSrouce.obj
          .\Debug\main.obj
      1>cRobotArm.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
-     1>LIBCMTD.lib(dyn_tls_dtor.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(dyn_tls_dtor.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(dyn_tls_init.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(dyn_tls_init.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(matherr_detection.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(matherr_detection.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(gs_cookie.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(gs_cookie.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(gs_report.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(gs_report.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(gs_support.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(gs_support.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(pesect.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(pesect.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(cpu_disp.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(cpu_disp.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(secchk.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(secchk.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(loadcfg.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(loadcfg.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(argv_mode.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(argv_mode.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(commit_mode.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(commit_mode.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(denormal_control.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(denormal_control.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(file_mode.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(file_mode.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(fltused.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(fltused.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(invalid_parameter_handler.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(invalid_parameter_handler.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(matherr.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(matherr.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(new_mode.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(new_mode.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(thread_locale.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(thread_locale.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(std_type_info_static.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(std_type_info_static.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(tncleanup.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(tncleanup.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(delete_array.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(delete_array.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(delete_scalar.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(delete_scalar.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(new_array.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(new_array.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(new_scalar.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(new_scalar.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(throw_bad_alloc.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(throw_bad_alloc.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(thread_safe_statics.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(thread_safe_statics.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(exe_main.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(exe_main.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(tlssup.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(tlssup.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(initializers.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(initializers.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(utility.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(utility.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(default_precision.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(default_precision.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(utility_desktop.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(utility_desktop.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(utility_static.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(utility_static.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(error.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(error.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(init.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(init.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(initsect.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(initsect.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(pdblkup.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(pdblkup.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(stack.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(stack.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
-     1>LIBCMTD.lib(userapi.obj) : warning LNK4099: PDB 'libcmtd.pdb' was not found with 'LIBCMTD.lib(userapi.obj)' or at 'C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\Debug\libcmtd.pdb'; linking object as if no debug info
          ppq_sym.vcxproj -> C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\.\Debug\ppq_sym.exe
        Manifest:
          C:\Program Files\Windows Kits\8.1\bin\x86\mt.exe /nologo /verbose /out:"C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\.\Debug\ppq_sym.exe.manifest" /manifest .\Debug\ppq_sym.exe.intermediate.manifest
-       BscMake:
-         D:\Program Files\Microsoft Visual Studio 14.0\VC\bin\bscmake.exe /nologo /o".\Debug\ppq_sym.bsc" .\Debug\cRobotArm.sbr .\Debug\Cam3D.sbr .\Debug\camer.sbr .\Debug\GlobleSrouce.sbr .\Debug\main.sbr
-     1>Done Building Project "C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\ppq_sym.vcxproj" (Rebuild target(s)).
+     1>Done Building Project "C:\Users\DELL\Documents\GitHub\ppqVsion\记录视觉结果V3\ppq_sym.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:05.94
+Time Elapsed 00:00:01.13

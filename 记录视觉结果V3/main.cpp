@@ -57,9 +57,16 @@ void main()
 	cRobotArm	robotArm;
 	cCam3D      robotVision;
 	cShell      shell;
+	cBallModel  ballModel;
+
+	BallPoint startPoint;
+	BallPoint hitPoint;
+
 	double ballHit[7];
 
 	int Predicted = 0;
+
+	double t_1, t_2;
 	
 	ballPosHis.clear();
 //初始化与对时----------------------
@@ -75,56 +82,76 @@ void main()
 	while(shell.getCommand()!='q') //主循环
 	{
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	/*	while (SystemClock.now() - t_o < 5)
+		while (SystemClock.now() - t_o < 5)
 		{
-		}*/
+		}
 		//t_o = SystemClock.now();  //时钟定期复位
 		double t_out,x_out,y_out,z_out,vx_out,vy_out,vz_out;
 		t_out = SystemClock.now()/1000.0;
-		if (t_out > 1000)
-		{
-			robotVision.Sync();
-			continue;
-		}	
+		//if (t_out > 1000)
+		//{
+		//	robotVision.Sync();
+		//	continue;
+		//}	
 		char rt = robotVision.RefreshSrcData();
 		if( rt!= 0  && SystemClock.now() - t_o > 5 ) //
 		{
 			t_o = SystemClock.now();
 			robotVision.ReConstruction(rt,&t_out,&x_out,&y_out,&z_out,&vx_out,&vy_out,&vz_out);//三维重建
 
-			z_out = -z_out;
+			//调整坐标系原点,这里标定原点是桌面正中心，转换到老程序的原点
+			x_out = x_out + 1100;
+			y_out = y_out + 300;
 
 			if ( dataFile.m_bStartSave )   //存储乒乓球位置
 			{
 				dataFile.SaveTraceData( x_out  , y_out , z_out  , t_out ,vx_out,vy_out,rt,88);
 			} 
+			startPoint.x = x_out / 1000; startPoint.y = y_out / 1000; startPoint.z = z_out / 1000;
+			startPoint.Vx = vx_out / 1000; startPoint.Vy = vy_out / 1000; startPoint.Vz = vz_out / 1000;
+			startPoint.t = t_out / 1000;
 
-			if (CheckTraceChange(x_out,y_out,z_out,vx_out,vy_out,vz_out,t_out))//若存在新轨迹
-			{
-				cout<<"Prepare to Predict"<<endl;
-				Predicted = 0;	
-				ballPredictHis.clear();
-			}
-			if ( Predicted == 0 )
-			{
-				ballPredictHis.push_back(x_out,y_out,z_out,vx_out,vy_out,vz_out,t_out);
-				if ( ballPredictHis.size() >= 5 )
-				{
-					
-					Predict_traceV2(ballPredictHis,ballHit);
-					Predicted = 1;
+			//t_1 = SystemClock.now() / 1000.0;
 
-					//robotArm.HitBall(ballHit[0],ballHit[1],ballHit[2],ballHit[3],ballHit[4],ballHit[5],ballHit[6]*1000);
+			//int rt2 = ballModel.predict(startPoint, &hitPoint, 2);
+			//if (rt2 == 1 || rt2 == 2)
+			//{
+			//	cout << hitPoint.t << endl
+			//		<< rt2 << endl;
+			//}
+			//else
+			//{
+			//	cout << "fail" <<rt2<< endl;
+			//}
+			//t_2 = SystemClock.now() / 1000.0;
+			//cout << "间隔"<<t_2 - t_1 << endl;
+			//cout <<"============================"<< endl;
+			//if (CheckTraceChange(x_out,y_out,z_out,vx_out,vy_out,vz_out,t_out))//若存在新轨迹
+			//{
+			//	cout<<"Prepare to Predict"<<endl;
+			//	Predicted = 0;	
+			//	ballPredictHis.clear();
+			//}
+			//if ( Predicted == 0 )
+			//{
+			//	ballPredictHis.push_back(x_out,y_out,z_out,vx_out,vy_out,vz_out,t_out);
+			//	if ( ballPredictHis.size() >= 5 )
+			//	{
+			//		
+			//		//Predict_traceV2(ballPredictHis,ballHit);
+			//		Predicted = 1;
 
-					for (int i = 0;i<7;i++)
-					{
-						cout<<ballHit[i]<<" ";
-					}
-					cout<<endl;
-					printline(30);
-					ballPredictHis.clear();
-				}	
-			}
+			//		//robotArm.HitBall(ballHit[0],ballHit[1],ballHit[2],ballHit[3],ballHit[4],ballHit[5],ballHit[6]*1000);
+
+			//		for (int i = 0;i<7;i++)
+			//		{
+			//			cout<<ballHit[i]<<" ";
+			//		}
+			//		cout<<endl;
+			//		printline(30);
+			//		ballPredictHis.clear();
+			//	}	
+			//}
 	    }
 		//---------------------------------------------
 	}
@@ -132,7 +159,7 @@ void main()
 	return;
 
 }
-//-------------------------------------------------------------------
+//--------------------------------------------------------------------0
 //
 //
 //
